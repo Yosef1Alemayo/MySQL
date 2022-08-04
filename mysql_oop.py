@@ -1,6 +1,8 @@
+"""MySQL class with select and update methods"""
+
 import mysql.connector
-class DB_Connect:
-    def __init__(self, host, user, password, port, database):
+class MySQL_DB:
+    def __init__(self, database, password, host='localhost', user='root', port='3306'):
         self.host = host
         self.user = user
         self.password = password

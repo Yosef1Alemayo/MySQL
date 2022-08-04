@@ -1,7 +1,7 @@
-from Class_DataBase import DB_Connect
+from mysql_oop import MySQL_DB
 
 
-q1 = DB_Connect('localhost', 'root', '*****', '3306', 'sakila')
+q1 = MySQL_DB('sakila', '*****')
 
 q1.execute('SELECT * FROM actor')
 q1.execute('SELECT * FROM city')

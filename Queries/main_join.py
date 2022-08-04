@@ -1,7 +1,9 @@
-from Class_DataBase import DB_Connect
+"""Join in MySQL"""
+
+from mysql_oop import MySQL_DB
 
 # Connect To The DataBase
-q2 = DB_Connect('localhost', 'root', '*****', '3306', 'northwind')
+q2 = MySQL_DB('northwind', '******')
 
 # The Queries:
 q2.execute('select * from employees as A join employee_privileges as A1 on A.id = A1.employee_id')

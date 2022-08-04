@@ -1,8 +1,10 @@
-from Class_DataBase import DB_Connect
+""" Update in MySQL"""
+from mysql_oop import MySQL_DB
 
-q1 = DB_Connect('localhost', 'root', '*****', '3306', 'northwind')
+q1 = MySQL_DB('northwind', '****')
 
-# Update And Displayed The Changes
+""" Update And Displayed The Changes """
+
 q1.commit("update orders set ship_name = 'Avi Israeli ' where id = 30")
 q1.execute('select ship_name from orders where id = 30')
 
